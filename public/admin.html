@@ -7,13 +7,45 @@
     <title> Ice Admin  </title>
 </head>
 <body>
-    <!-- An insert Form To connect to the API to ADD, Update and Delete Data -->
-    <!-- Form can contain, Menu Item name, Description , Image? 
-    
-        ADMIN FORM: The form should Be Connected to the 
-        - Text Element To add to the form similar to the Check box  Demo in week 12-13
-        -
-    
-    -->
+    <h1>Admin Page</h1>
+    <form id="modifyMenu">
+        <label>Menu Item:</label>
+        <br>
+        <input type="text" id="name" required>
+        <br>
+        <label>Description:</label>
+        <br>
+        <textarea id="description" required></textarea>
+        <br>
+        <label>Price:</label>
+        <br>
+        <input type="number" id="price" step="0.01" required>
+        <br>
+        <br>
+        <button type="submit">Add</button>
+        <button type="submit">Update</button>
+        <button type="submit">Delete</button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <form id="modifyEvent">
+        <label>Event Name:</label>
+        <br>
+        <input type="text" id="eventName"required>
+        <br>
+        <label>Event Date:</label>
+        <br>
+        <input type="date" id="eventDate"required>
+        <br>
+        <label>Event Description:</label>
+        <br>
+        <textarea id="eventDescription"required></textarea>
+        <br>
+        <br>
+        <button type="submit">Add</button>
+        <button type="submit">Update</button>
+        <button type="submit">Delete</button>
+      </form>
 </body>
 </html>
