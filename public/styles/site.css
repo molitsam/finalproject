@@ -2,7 +2,7 @@
 Liink The files, We will link New Css Styling pages to the Html Files */
 
 
-/*Home Page*/
+/*Home Page CSS*/
 
 :root{ 
 
@@ -105,6 +105,10 @@ Liink The files, We will link New Css Styling pages to the Html Files */
     float: right;
     width: 50%;
     
+  }
+
+  #Events{
+    text-align: center;
   }
 
   /*FOOTER*/

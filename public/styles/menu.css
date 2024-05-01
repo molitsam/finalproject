@@ -14,11 +14,11 @@
   }
 #page{
     max-width: 1600px;
-    margin: 3px auto;
+    margin: auto;
   }
   body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--Purple);
+    background-color: white;
   }
 /*header*/
 header {
@@ -74,20 +74,29 @@ header {
         nav ul li:hover a{
           color: var(--floralwhite);
         }
-        .menu{
-            width: 800px;
-            padding: 50px;
-            margin: 20px;
-            float: left;
-          }
-          /*cannot figure out how to center the photo*/
+      
+         /*NAV END*/
 
-          article:last-of-type{
-            float: right;
-            width: 50%;
-            margin: 1px;
-            
-          }
+         /*Body Start*/
+          
+         #Scoop{
+          background-color: var(--Purple);
+          text-align: center;
+          
+
+         }
+
+         #Cookies{
+          background-color: var(--floralwhite);
+          text-align: center;
+         }
+
+         #NewItems{
+          background-color: var(--Purple);
+          text-align: center;
+         }
+
+
           footer{
             clear:both; 
             /*Will clear the float value for left and right sides */
