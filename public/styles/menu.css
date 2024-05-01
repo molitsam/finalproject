@@ -12,7 +12,7 @@
    --Blue:rgb(164, 226, 255);
     
   }
-#page{
+#content{
     max-width: 1600px;
     margin: 3px auto;
   }
@@ -80,6 +80,8 @@ header {
             margin: 20px;
             float: left;
           }
+
+          
           /*cannot figure out how to center the photo*/
 
           article:last-of-type{
@@ -90,7 +92,6 @@ header {
           }
           footer{
             clear:both; 
-            /*Will clear the float value for left and right sides */
             background-color: var(--Blue);
             padding-left: 2%;
             padding-top: 2px;
