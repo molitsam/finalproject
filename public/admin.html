@@ -7,20 +7,29 @@
     <title> Ice Admin  </title>
 </head>
 <body>
+  <div id="content">
   <header>
     <h1></h1>
     <!--banner image-->
 </header>
+<nav>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li> <a href="contact.html">Contact</a> </li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+</nav>
     <form id="modifyMenu">
-        <label>Menu Item:</label>
+        <label><strong>Menu Item:</strong></label>
         <br>
         <input type="text" id="name" required>
         <br>
-        <label>Description:</label>
+        <label><strong>Description:</strong><label>
         <br>
         <textarea id="description" required></textarea>
         <br>
-        <label>Price:</label>
+        <label><strong>Price:</strong><label>
         <br>
         <input type="number" id="price" step="0.01" required>
         <br>
@@ -33,15 +42,15 @@
       <br>
       <br>
       <form id="modifyEvent">
-        <label>Event Name:</label>
+        <label><strong>Event Name:</strong><label>
         <br>
         <input type="text" id="eventName"required>
         <br>
-        <label>Event Date:</label>
+        <label><strong>Event Date:</strong><label>
         <br>
         <input type="date" id="eventDate"required>
         <br>
-        <label>Event Description:</label>
+        <label><strong>Event Description:</strong><label>
         <br>
         <textarea id="eventDescription"required></textarea>
         <br>
@@ -53,6 +62,7 @@
       <footer>
         <p><small> THE ICE QUEEN TRUCK | EST. SINCE 2018 | &copy;  </small></p>
       </footer>
+    </div>
 </body>
 </html>
 

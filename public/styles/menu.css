@@ -12,7 +12,7 @@
    --Blue:rgb(164, 226, 255);
     
   }
-#page{
+#content{
     max-width: 1600px;
     margin: auto;
   }
@@ -74,6 +74,7 @@ header {
         nav ul li:hover a{
           color: var(--floralwhite);
         }
+<<<<<<< HEAD
       
          /*NAV END*/
 
@@ -96,10 +97,20 @@ header {
           text-align: center;
          }
 
+=======
+        .menu{
+            width: 800px;
+            padding: 50px;
+            margin: 20px;
+            float: left;
+          }
+
+          
+          /*cannot figure out how to center the photo*/
+>>>>>>> e1abc0e800d8d467ba0d89e21519c26b6dcc3d4f
 
           footer{
             clear:both; 
-            /*Will clear the float value for left and right sides */
             background-color: var(--Blue);
             padding-left: 2%;
             padding-top: 2px;

@@ -1,0 +1,5 @@
+### Variables @url = http://localhost:3000
+
+### Get all menu items
+
+GET {{url}}/api/menu
