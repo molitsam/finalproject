@@ -11,7 +11,7 @@
    --Blue:rgb(164, 226, 255);
     
   }
-  #page{
+  #content{
     max-width: 1600px;
     margin: 3px auto;
   }
@@ -31,7 +31,6 @@ header {
   header p{
     float: right;
     padding-top: 300px;
-    padding-right: 2%;
     color: white;
   }
   
@@ -43,9 +42,7 @@ header {
         margin-top:-1rem;
         background-color: var(--Blue);
         text-align: center;
-       
        }
-      
       nav ul{
         list-style-type: none ;
       }
@@ -74,21 +71,31 @@ header {
           color: var(--floralwhite);
         }
         section{
-            width: 1750px;
-            padding: 20px;
-            margin: 20px;
-        }article p{
             padding: 20px;
         }
         article{
             text-align: center;
         }
-        form{
 
+        /*changing article to be just the section*/
+        article p{
+          padding: 15px;
+        }
+        #sendButton{
+          background-color: var(--Pink);
+          color: var(--Black);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 15px;
+          padding: 10px 24px;
+          border: none;
+        }
+        #sendButton:hover{
+          background-color: var(--floralwhite);
+          color: var(--Pink);
+          
         }
         footer{
             clear:both; 
-            /*Will clear the float value for left and right sides */
             background-color: var(--Blue);
             padding-left: 2%;
             padding-top: 2px;
