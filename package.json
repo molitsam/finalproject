@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/molitsam/finalproject#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongodb": "^6.6.1"
   }
 }

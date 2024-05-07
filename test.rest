@@ -1,5 +1,18 @@
-### Variables @url = http://localhost:3000
+### Variables 
+@url = http://localhost:3000
 
 ### Get all menu items
 
 GET {{url}}/api/menu
+
+## Add a new item
+POST {{url}}/api/menu
+Content-Type: application/json
+
+{
+    "name": "Test",      
+    "description": "This will be deleted! ",
+    "price": {
+        "$numberDecimal": "3.00"
+    }
+}

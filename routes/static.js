@@ -5,7 +5,15 @@ const router = express.Router()
 const root = path.join(__dirname, '..', 'public')
 
 router.get('/', (_, response) => {
-    response.sendFile('index.html', { root })
+    response.sendFile('home.html', { root })
+})
+
+router.get('/api/menu', (_, response) => {
+    response.sendFile('menu.html')
+})
+
+router.get('/api/menu', (_, response) => {
+    response.sendFile('menu.html')
 })
 
 //anything that gets to this point that hasn't already been handled

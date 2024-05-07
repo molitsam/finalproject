@@ -3,20 +3,14 @@
 
 // express file requirement 
 const express = require('express')
-//const path = require('path')
+const path = require('path')
+
+const { getCollection, ObjectId } = require('./routes/api.js')
 
 const app = express()
 const port = process.env.PORT || 3000
 
-//const { url } = require('./secrets/mongodb.json')
-
-//const root = path.join(__dirname, 'public')
-
-
- const getCollection = async (dbName, collectionName) => {
-     await client.connect()
-     return client.db(dbName).collection(collectionName)
- }
+const root = path.join(__dirname, 'public')
 
 //middleware
 app.use(express.json())
@@ -37,5 +31,12 @@ app.get('/api/menu', async (_, response) => {
 	response.json({ items })
     //console.log(items)
 })
+
+// app.post('api/menu', async (_, response) => {
+//     const { name, description, price } = request.body
+//     const collection = await getCollection('FoodTruck-API', 'menu')
+//     await collection.insertOne({ name, description, price })
+//     response.json({ message: 'New menu item added!' })
+// })
 
 app.listen(port, () => console.log(`Server running: http://localhost:${port}`))
