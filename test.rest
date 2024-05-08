@@ -1,18 +1,34 @@
 ### Variables 
 @url = http://localhost:3000
+@id = 663ab8a94a6e02ff10685bfe
 
 ### Get all menu items
 
-GET {{url}}/api/menu
+#GET {{url}}/api/menu
 
 ## Add a new item
-POST {{url}}/api/menu
+#POST {{url}}/api/menu
+#Content-Type: application/json
+
+# {
+#     "name": "Test",      
+#     "description": "This will be deleted! ",
+#     "price": {
+#         "$numberDecimal": "3.00"
+#     }
+# }
+
+## Get menu item by id
+#GET {{url}}/api/menu/{{id}}
+
+## Update menu item by id
+PUT {{url}}/api/menu/{{id}}
 Content-Type: application/json
 
 {
-    "name": "Test",      
+    "name": "Test Update",      
     "description": "This will be deleted! ",
     "price": {
-        "$numberDecimal": "3.00"
+        "$numberDecimal": "5.00"
     }
 }
