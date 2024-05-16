@@ -1,6 +1,6 @@
 ### Variables 
 @url = http://localhost:3000
-@id = 663ab8a94a6e02ff10685bfe
+//@id = 663ab8a94a6e02ff10685bfe
 
 ### Get all menu items
 
@@ -22,7 +22,7 @@
 #GET {{url}}/api/menu/{{id}}
 
 ## Update menu item by id
-PUT {{url}}/api/menu/{{id}}
+//PUT {{url}}/api/menu/{{id}}
 Content-Type: application/json
 
 {
@@ -32,3 +32,5 @@ Content-Type: application/json
         "$numberDecimal": "5.00"
     }
 }
+
+DELETE {{url}}/api/menu/{"$oid":"6615ca686f8ef37e8865a43d"}
