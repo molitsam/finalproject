@@ -41,9 +41,15 @@ router.put('/menu/:id', async (request, response) => {
 })
 
 //delete menu item by id (DELETE /api/menu/:id)
+router.delete('/api/menu/:id', async (request, response) => {
 
+})
 //get all events (GET /api/events)
-
+router.get('/api/events', async (request, response) => {
+    const collection = await getCollection('FoodTruck-API', 'events')
+    const events = await collection.find({}).toArray()
+    response.json({ events })
+})
 //get event by id (GET /api/events/:id)
 router.get('/events/:id', async (request, response) => {
     const { id } = request.params
