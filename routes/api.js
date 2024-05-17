@@ -62,10 +62,34 @@ router.get('/events/:id', async (request, response) => {
     response.json(event)
 })
 
-//add new event (POST /api/events)
+//add new event (POST /events)
+router.post('/events', async (request,response) =>{
+    const {body} = request
+    const {name, location, dates, hours} = body
+    const event = {name, location, dates, hours}
 
-//update event by id (PUT /api/events/:id)
+    const collection = await getCollection('FoodTruck-API', 'events')
+    const eventresult = await collection.insertOne(event)
+    response.send(eventresult)
+})
 
-//delete event by id (DELETE /api/events/:id)
+//update event by id (PUT /events/:id)
+router.put('/events/:id', async (request,response)=>{
+    const { body, params } = request /*ensure we call the param and id of the DB object to specify */
+    const { id } = params
+    const {name, location, dates, hours} = body
+    const event = {name, location, dates, hours}
+
+    const collection = await getCollection('FoodTruck-API', 'events')
+    const eventresult = collection.updateOne({ _id: new ObjectId(id) }, { $set: event})
+    response.send(eventresult)
+})
+//delete event by id (DELETE /events/:id)
+router.delete('/events/:id', async (request,response)=>{
+    const { id } = request.params
+    const collection = await getCollection('FoodTruck-API', 'events')
+    const eventresult = await collection.deleteOne({ _id: new ObjectId(id) })
+    response.send(eventresult)
+})
 
 module.exports = router
