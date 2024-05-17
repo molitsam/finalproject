@@ -49,27 +49,27 @@ router.delete('/api/menu/:id', async (request, response) => {
 })
 //get all events (GET /api/events)
 router.get('/api/events', async (request, response) => {
-    const collection = await getCollection('FoodTruck-API', 'events')
-    const events = await collection.find({}).toArray()
+    const eventcollection = await getCollection('FoodTruck-API', 'events')
+    const events = await eventcollection.find({}).toArray()
     response.json({ events })
 })
 //get event by id (GET /api/events/:id)
 router.get('/events/:id', async (request, response) => {
     const { id } = request.params
-    const collection = await getCollection('FoodTruck-API', 'events')
-    const event = await collection.findOne({ "_id": new ObjectId(id) })
+    const eventcollection = await getCollection('FoodTruck-API', 'events')
+    const event = await eventcollection.findOne({ "_id": new ObjectId(id) })
     //const findItem = items.filter(({ _id }) => _id.toString == id )
     response.json(event)
 })
 
-//add new event (POST /events)
+//Add New Event
 router.post('/events', async (request,response) =>{
     const {body} = request
     const {name, location, dates, hours} = body
     const event = {name, location, dates, hours}
 
-    const collection = await getCollection('FoodTruck-API', 'events')
-    const eventresult = await collection.insertOne(event)
+    const eventcollection = await getCollection('FoodTruck-API', 'events')
+    const eventresult = await eventcollection.insertOne(event)
     response.send(eventresult)
 })
 
@@ -80,15 +80,15 @@ router.put('/events/:id', async (request,response)=>{
     const {name, location, dates, hours} = body
     const event = {name, location, dates, hours}
 
-    const collection = await getCollection('FoodTruck-API', 'events')
-    const eventresult = collection.updateOne({ _id: new ObjectId(id) }, { $set: event})
+    const eventcollection = await getCollection('FoodTruck-API', 'events')
+    const eventresult = eventcollection.updateOne({ _id: new ObjectId(id) }, { $set: event})
     response.send(eventresult)
 })
 //delete event by id (DELETE /events/:id)
 router.delete('/events/:id', async (request,response)=>{
     const { id } = request.params
-    const collection = await getCollection('FoodTruck-API', 'events')
-    const eventresult = await collection.deleteOne({ _id: new ObjectId(id) })
+    const eventcollection = await getCollection('FoodTruck-API', 'events')
+    const eventresult = await eventcollection.deleteOne({ _id: new ObjectId(id) })
     response.send(eventresult)
 })
 

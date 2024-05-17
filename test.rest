@@ -32,3 +32,37 @@ Content-Type: application/json
         "$numberDecimal": "5.00"
     }
 }
+
+### Add new Event 
+
+POST {{url}}/events
+Content-Type: application/json
+{
+    "name":"AAPI Celebration ",
+    "location":"1065 Lombardi Ave, Green Bay, WI 54304 ",
+    "dates":"May 15 2024 ",
+    " hours": "5:30pm - 8pm "
+}
+
+### Update Event List
+PUT {{url}}/events/{{id}}
+
+{
+    "name":"AAPI Celebration ",
+    "location":"1065 Lombardi Ave, Green Bay, WI 54304 ",
+    "dates":"May 20 2024 ",
+    " hours": "5:30pm - 8pm "
+}
+
+### DELETE Event 
+
+DELETE {{url}}/events/{{id}}
+
+{
+    "name":" AAPI Celebration ",
+    "location":" 1065 Lombardi Ave, Green Bay, WI 54304 ",
+    "dates":" May 20 2024  ",
+    " hours": " 5:30pm - 8pm "
+}
+
+

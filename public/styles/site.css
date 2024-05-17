@@ -123,52 +123,7 @@ Liink The files, We will link New Css Styling pages to the Html Files */
    text-align: center; 
    position:static; 
   }
-   /*Page query! FINISH WHEN JAVASCRIPT CODE WORKS*/
-
-
-  /* @media screen and (max-width:1080px) {
-
-    #page header h1{
-      margin-left: 30% ;
-      padding-top: .5em;
-      font-size: 3.5rem;
-      
-     }
-  
-  
+   
+  .Events{
+    text-align: center;
   }
-  
-  @media screen and (max-width:767px) {
-    
-    header p{
-      float: right;
-      padding-right: 2%;
-      color: white;
-    }
-  
-    article:first-of-type{
-      float: none;
-      width: 100%;
-      line-height: 1.5em;
-      margin: auto;
-    }
-  
-    article:last-of-type{
-      float: none;
-      width: 100%;
-      line-height: 1.5em;
-      margin: auto;
-    }
-  
-    section{
-     columns: 1;
-     margin-bottom: -30%px;
-     margin-bottom: -150px;
-    }
-  
-  
-  
-    
-  }
-  
-   */

@@ -74,13 +74,9 @@ header {
         nav ul li:hover a{
           color: var(--floralwhite);
         }
-<<<<<<< HEAD
-      
-         /*NAV END*/
 
-         /*Body Start*/
           
-         #Scoop{
+       #Scoop{
           background-color: var(--Purple);
           text-align: center;
           
@@ -97,7 +93,6 @@ header {
           text-align: center;
          }
 
-=======
         .menu{
             width: 800px;
             padding: 50px;
@@ -107,7 +102,7 @@ header {
 
           
           /*cannot figure out how to center the photo*/
->>>>>>> e1abc0e800d8d467ba0d89e21519c26b6dcc3d4f
+
 
           footer{
             clear:both; 

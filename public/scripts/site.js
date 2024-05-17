@@ -1,13 +1,18 @@
+ alert('Im Connected')
 
-// Front end Connection for the Java script , connecting to Buttons, Page Divs Ect 
+/*Home Page Events Toggle & Display */
+const getEvents = async () => {
+    const response = await fetch('/api/events')
+    const { name, location, dates, hours } = await response.json()
+    document.querySelector('.Events .Etitle').textContent = name
+    document.querySelector('.Events .Elocation' ).textContent = location
+    document.querySelector('.Events .Edates').textContent = dates
+    document.querySelector('.Event .Etime').textContent = hours
+}
+getEvents()
+document.querySelector('.Events button').addEventListener('click',getEvents)
 
 
-// Front end Connection for the Java script , connecting to Buttons, Page Divs Ect 
-
-/* Home Page- Toggle button that strolls through the events  */
-
-/*Menu Page- A front page that will hide the menu first then A java programmed button 
-will display all items  */
 
 /* after Submit is hit on the contact page java will redirect you to home */
 
